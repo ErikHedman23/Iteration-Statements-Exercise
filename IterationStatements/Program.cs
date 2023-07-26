@@ -37,11 +37,11 @@ namespace IterationStatements
         }
 
         //Write a method to check whether a given number is even or odd
-        public static void Method_4(int num)
+        public static string Method_4(int num)
         {
             
-            var equalOrOdd = (num % 2 == 0) ? "Even" : "Odd";
-            Console.WriteLine(equalOrOdd);
+            var evenOrOdd = (num % 2 == 0) ? "Even" : "Odd";
+            return evenOrOdd;
 
         }
         //Write a method to check whether a given number is positive or negative
@@ -126,7 +126,8 @@ namespace IterationStatements
                 case 4:
                     Console.WriteLine("Enter a number:");
                     var input = int.Parse(Console.ReadLine());
-                    Method_4(input);
+                    var result = Method_4(input);
+                    Console.WriteLine($"Your number is {result}.");
                     break;
                 case 5:
                     Console.WriteLine("Enter a number:");
