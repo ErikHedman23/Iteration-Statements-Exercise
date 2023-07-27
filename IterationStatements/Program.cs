@@ -28,11 +28,11 @@ namespace IterationStatements
            
             if (a == b)
             {
-                Console.WriteLine("Equal");
+                 Console.WriteLine("Equal");
             }
             else
             {
-                Console.WriteLine("Not Equal");
+                 Console.WriteLine("Not Equal");
             }
         }
 
@@ -45,7 +45,7 @@ namespace IterationStatements
 
         }
         //Write a method to check whether a given number is positive or negative
-        public static void Method_5(int num)
+        public static void Method_5(int num) //could also just make this method a boolean and just make your return either true or false.
         {
 
             if (num >= 1)
@@ -77,7 +77,10 @@ namespace IterationStatements
             {
                 Console.WriteLine("Sorry kid.  You are gonna have wait a little longer.");
             }
-        }
+        } //can write this as a boolean as a Try.Parse like this: int canParse = int.TryParse(Console.ReadLine(), out int age);
+        //this will default the false value inserted to 0 and not break the code
+        //if you want them to try it again, create a while loop as long as the variable for try parse equals false; scope it with the same information as above without initializing age again.  Just declare age as your out without int before it.
+        //maybe have your Console.WriteLine("Please enter a valid age:");
 
         //Heatin Up Section:
         //Write a method to check if an integer(from the user) is in the range -10 to 10
@@ -125,7 +128,7 @@ namespace IterationStatements
                     break;
                 case 4:
                     Console.WriteLine("Enter a number:");
-                    var input = int.Parse(Console.ReadLine());
+                    var input = int.Parse(Console.ReadLine());//input becomes num which then gets stored as result.
                     var result = Method_4(input);
                     Console.WriteLine($"Your number is {result}.");
                     break;
